@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nguyễn Ngọc Trang — CEO · Project Manager · Lecturer</title>
+<meta name="description" content="Nguyễn Ngọc Trang — Hồ sơ điều hành, quản lý dự án hạ tầng, khởi nghiệp và giảng dạy đại học. 18+ năm kinh nghiệm, MBA & MSc, Metroline Bến Thành – Suối Tiên." />
+<meta property="og:title" content="Nguyễn Ngọc Trang — CEO · Project Manager · Lecturer" />
+<meta property="og:description" content="18+ years P&L leadership, infrastructure project management & university lecturing. MBA & MSc." />
+<meta property="og:image" content="images/profile.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<style>
+:root{
+  --ink:#0c1e2e;
+  --ink-soft:#2a3f55;
+  --paper:#f5efe2;
+  --paper-2:#ebe2cf;
+  --cobalt:#1840a1;
+  --cobalt-deep:#0c2867;
+  --vermillion:#c8431b;
+  --gold:#b88842;
+  --line:#1c2a3a;
+  --muted:#6b7a8a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Inter Tight",system-ui,sans-serif;
+  font-size:16px;line-height:1.5;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Fraunces",Georgia,serif;font-feature-settings:"ss01","ss02";font-optical-sizing:auto}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.upper{text-transform:uppercase;letter-spacing:.14em}
+
+/* Paper grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.5;mix-blend-mode:multiply;
+}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+/* ========== NAV ========== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:24px;
+}
+.logo{font-family:"Fraunces",serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
+.logo b{color:var(--vermillion)}
+.nav-links{display:flex;gap:28px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.nav-links a{position:relative;padding:6px 0;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--vermillion)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:var(--vermillion);transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
+}
+.nav-links a:hover::after{transform:scaleX(1)}
+.lang-toggle{
+  border:1px solid var(--line);
+  font-size:11px;font-weight:600;letter-spacing:.12em;
+  background:transparent;color:var(--ink);cursor:pointer;
+  padding:8px 12px;border-radius:0;display:flex;gap:0;
+  font-family:"JetBrains Mono",monospace;
+}
+.lang-toggle span{padding:2px 6px;transition:all .2s}
+.lang-toggle span.active{background:var(--ink);color:var(--paper)}
+@media(max-width:780px){.nav-links{display:none}}
+
+/* ========== HERO ========== */
+.hero{padding:80px 0 60px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+
+.hero-meta{display:flex;gap:16px;margin-bottom:24px;align-items:center}
+.hero-meta .dot{width:8px;height:8px;background:var(--vermillion);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.hero-meta .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+
+.hero h1{
+  font-family:"Fraunces",serif;
+  font-weight:400;
+  font-size:clamp(48px,8vw,120px);
+  line-height:.92;
+  letter-spacing:-.025em;
+  margin-bottom:24px;
+}
+.hero h1 .em{font-style:italic;font-weight:300;color:var(--cobalt)}
+.hero h1 .accent{color:var(--vermillion);font-weight:500}
+
+.hero-roles{
+  font-size:13px;font-family:"JetBrains Mono",monospace;
+  color:var(--ink-soft);
+  margin-bottom:32px;letter-spacing:.05em;
+}
+.hero-roles em{font-style:normal;color:var(--vermillion);font-weight:500}
+
+.hero-tagline{
+  font-family:"Fraunces",serif;font-weight:300;font-style:italic;
+  font-size:22px;line-height:1.4;
+  color:var(--ink-soft);max-width:540px;
+  border-left:2px solid var(--vermillion);
+  padding-left:18px;
+}
+
+.hero-portrait{
+  position:relative;
+  aspect-ratio:3/4;
+  background:var(--paper-2);
+  overflow:hidden;
+}
+.hero-portrait img{
+  width:100%;height:100%;object-fit:cover;object-position:center 20%;
+  filter:contrast(1.05) saturate(.9);
+}
+.hero-portrait::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 60%,rgba(12,30,46,.18));
+  pointer-events:none;
+}
+.portrait-tag{
+  position:absolute;left:16px;bottom:16px;
+  font-family:"JetBrains Mono",monospace;font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--paper);
+  background:rgba(12,30,46,.85);padding:6px 10px;
+}
+
+/* Big stats strip */
+.stats{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:36px 0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+}
+@media(max-width:780px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:0 8px;border-left:1px solid rgba(28,42,58,.18)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .num{
+  font-family:"Fraunces",serif;font-weight:500;
+  font-size:48px;line-height:1;
+  letter-spacing:-.02em;color:var(--cobalt-deep);
+  margin-bottom:8px;
+}
+.stat .num sup{font-size:.4em;vertical-align:top;margin-left:2px;color:var(--vermillion)}
+.stat .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ========== SECTIONS ========== */
+section{padding:80px 0;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--vermillion);font-weight:600;
+  margin-bottom:20px;
+}
+.eyebrow::before{
+  content:"";width:32px;height:1px;background:var(--vermillion);
+}
+.section-h{
+  font-family:"Fraunces",serif;font-weight:400;
+  font-size:clamp(36px,5vw,64px);
+  line-height:1;letter-spacing:-.02em;
+  margin-bottom:48px;max-width:780px;
+}
+.section-h em{font-style:italic;color:var(--cobalt)}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}}
+.about-side{position:sticky;top:100px}
+.about-prose p{
+  font-size:18px;line-height:1.65;margin-bottom:20px;
+  color:var(--ink-soft);
+}
+.about-prose p:first-child::first-letter{
+  font-family:"Fraunces",serif;font-weight:500;
+  font-size:64px;line-height:.85;float:left;
+  padding:6px 12px 0 0;color:var(--cobalt);
+}
+.id-card{
+  border:1px solid var(--line);
+  padding:24px;background:rgba(255,255,255,.4);
+}
+.id-row{
+  display:flex;justify-content:space-between;gap:16px;
+  padding:12px 0;border-bottom:1px dashed rgba(28,42,58,.25);
+  font-size:13px;
+}
+.id-row:last-child{border-bottom:0}
+.id-row .k{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.id-row .v{font-weight:500;text-align:right}
+
+/* Highlight reel — achievements */
+.highlights{background:var(--ink);color:var(--paper);margin:0 -28px;padding:80px 28px}
+.highlights .wrap{padding:0}
+.highlights .section-h{color:var(--paper)}
+.highlights .section-h em{color:var(--gold)}
+.highlights .eyebrow{color:var(--gold)}
+.highlights .eyebrow::before{background:var(--gold)}
+.hl-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:rgba(245,239,226,.15);
+}
+@media(max-width:900px){.hl-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.hl-grid{grid-template-columns:1fr}}
+.hl-card{
+  background:var(--ink);padding:28px 24px;
+  display:flex;flex-direction:column;gap:12px;
+  min-height:200px;
+}
+.hl-card .n{
+  font-family:"JetBrains Mono",monospace;
+  font-size:11px;color:var(--gold);letter-spacing:.18em;
+}
+.hl-card .t{
+  font-family:"Fraunces",serif;font-weight:400;
+  font-size:22px;line-height:1.2;
+}
+
+/* Experience timeline */
+.exp{position:relative}
+.exp-item{
+  display:grid;grid-template-columns:160px 1fr;gap:48px;
+  padding:36px 0;border-top:1px solid var(--line);
+  position:relative;
+}
+.exp-item:last-child{border-bottom:1px solid var(--line)}
+@media(max-width:780px){.exp-item{grid-template-columns:1fr;gap:12px}}
+.exp-when{
+  font-family:"JetBrains Mono",monospace;font-size:12px;
+  color:var(--vermillion);font-weight:500;letter-spacing:.06em;
+  padding-top:6px;
+}
+.exp-when .now{
+  display:inline-block;background:var(--vermillion);color:var(--paper);
+  padding:1px 6px;font-size:10px;margin-left:4px;letter-spacing:.12em;
+}
+.exp-role{
+  font-family:"Fraunces",serif;font-weight:500;font-size:26px;
+  line-height:1.15;letter-spacing:-.01em;margin-bottom:6px;
+}
+.exp-org{
+  font-size:14px;color:var(--cobalt);font-weight:500;
+  margin-bottom:14px;
+}
+.exp-org .sep{color:var(--muted);margin:0 8px}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{
+  padding-left:18px;position:relative;
+  font-size:15px;line-height:1.55;color:var(--ink-soft);
+  margin-bottom:8px;
+}
+.exp-bullets li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:6px;height:6px;background:var(--cobalt);
+}
+
+/* Education */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+@media(max-width:780px){.edu{grid-template-columns:1fr}}
+.edu-card{background:var(--paper);padding:28px}
+.edu-card .yr{
+  font-family:"JetBrains Mono",monospace;font-size:12px;
+  color:var(--vermillion);letter-spacing:.08em;margin-bottom:8px;
+}
+.edu-card .deg{
+  font-family:"Fraunces",serif;font-weight:500;
+  font-size:22px;line-height:1.2;margin-bottom:8px;
+}
+.edu-card .sch{font-size:14px;color:var(--ink-soft)}
+.edu-card .ach{
+  margin-top:14px;font-size:12px;color:var(--gold);
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* Skills cloud */
+.skills-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;
+}
+.skill{
+  border:1px solid var(--line);padding:20px;
+  background:rgba(255,255,255,.4);
+  transition:all .25s ease;
+}
+.skill:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--vermillion)}
+.skill .t{font-family:"Fraunces",serif;font-weight:500;font-size:18px;margin-bottom:6px}
+.skill .d{font-size:13px;color:var(--muted)}
+.skill:hover .d{color:rgba(245,239,226,.7)}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--paper);margin:0 -28px;padding:100px 28px}
+.contact .wrap{padding:0}
+.contact h2{
+  font-family:"Fraunces",serif;font-weight:300;font-style:italic;
+  font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em;
+  margin-bottom:36px;
+}
+.contact h2 b{font-style:normal;font-weight:500;color:var(--gold)}
+.contact-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:48px;
+  border-top:1px solid rgba(245,239,226,.2);padding-top:48px;
+}
+@media(max-width:780px){.contact-grid{grid-template-columns:1fr;gap:24px}}
+.c-block .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.c-block .v{font-family:"Fraunces",serif;font-size:22px;font-weight:400;line-height:1.4}
+.c-block .v a{border-bottom:1px solid rgba(245,239,226,.3);padding-bottom:2px;transition:all .2s}
+.c-block .v a:hover{color:var(--gold);border-color:var(--gold)}
+
+/* Footer */
+.foot{
+  padding:36px 0;
+  font-size:12px;color:var(--muted);
+  display:flex;justify-content:space-between;align-items:center;
+  letter-spacing:.05em;
+}
+.foot .left b{color:var(--ink)}
+@media(max-width:520px){.foot{flex-direction:column;gap:12px;text-align:center}}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Language switching */
+[data-vi],[data-en]{display:none}
+html[data-lang="vi"] [data-vi]{display:inline}
+html[data-lang="en"] [data-en]{display:inline}
+html[data-lang="vi"] [data-vi].b,html[data-lang="en"] [data-en].b{display:block}
+html[data-lang="vi"] [data-vi].li,html[data-lang="en"] [data-en].li{display:list-item}
+html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex}
+
+/* Pull-quote */
+.pq{
+  font-family:"Fraunces",serif;font-weight:300;font-style:italic;
+  font-size:clamp(28px,3.5vw,44px);line-height:1.25;
+  max-width:900px;margin:40px 0 0;
+  color:var(--ink);position:relative;padding-left:32px;
+}
+.pq::before{
+  content:"“";font-size:120px;line-height:1;
+  position:absolute;left:-12px;top:-30px;
+  color:var(--vermillion);font-style:normal;
+}
+.pq cite{
+  display:block;margin-top:20px;font-style:normal;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-family:"Inter Tight",sans-serif;
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">N. N. <b>Trang</b></div>
+    <div class="nav-links">
+      <a href="#about"><span data-vi>Giới thiệu</span><span data-en>About</span></a>
+      <a href="#experience"><span data-vi>Kinh nghiệm</span><span data-en>Experience</span></a>
+      <a href="#education"><span data-vi>Học vấn</span><span data-en>Education</span></a>
+      <a href="#contact"><span data-vi>Liên hệ</span><span data-en>Contact</span></a>
+    </div>
+    <button class="lang-toggle" onclick="toggleLang()">
+      <span id="lvi" class="active">VI</span><span id="len">EN</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left reveal in">
+        <div class="hero-meta">
+          <span class="dot"></span>
+          <span class="label" data-vi>Hồ Chí Minh, Việt Nam · Sẵn sàng cho cơ hội mới</span>
+          <span class="label" data-en>Ho Chi Minh City · Open to new opportunities</span>
+        </div>
+        <h1 class="serif">
+          Nguyễn<br>
+          <span class="em">Ngọc</span> <span class="accent">Trang.</span>
+        </h1>
+        <div class="hero-roles">
+          <em>CEO</em> · <em>Project Manager</em> · <em>University Lecturer</em>
+        </div>
+        <p class="hero-tagline">
+          <span data-vi>Hơn 18 năm dẫn dắt các dự án hạ tầng quy mô lớn, doanh nghiệp khởi nghiệp, và truyền cảm hứng cho thế hệ doanh nhân kế tiếp.</span>
+          <span data-en>Over 18 years leading large-scale infrastructure projects, startup ventures, and inspiring the next generation of entrepreneurs.</span>
+        </p>
+      </div>
+      <div class="hero-portrait reveal in">
+        <img src="images/profile.jpg" alt="Nguyễn Ngọc Trang" />
+        <div class="portrait-tag">HCMC · 1984</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+<div class="wrap">
+  <div class="stats">
+    <div class="stat">
+      <div class="num">18<sup>+</sup></div>
+      <div class="lbl" data-vi>Năm kinh nghiệm</div>
+      <div class="lbl" data-en>Years experience</div>
+    </div>
+    <div class="stat">
+      <div class="num">4.0<sup>/4</sup></div>
+      <div class="lbl" data-vi>GPA Thạc sĩ MBA</div>
+      <div class="lbl" data-en>MBA GPA · Straight A</div>
+    </div>
+    <div class="stat">
+      <div class="num">200<sup>%</sup></div>
+      <div class="lbl" data-vi>Tăng trưởng doanh số</div>
+      <div class="lbl" data-en>Sales growth achieved</div>
+    </div>
+    <div class="stat">
+      <div class="num">2</div>
+      <div class="lbl" data-vi>Bằng Thạc sĩ (MBA + MSc)</div>
+      <div class="lbl" data-en>Master's degrees</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow"><span data-vi>Hồ sơ</span><span data-en>Profile</span></div>
+    <h2 class="section-h serif">
+      <span data-vi>Một <em>nhà điều hành</em> thực chiến, một <em>giảng viên</em> tận tâm.</span>
+      <span data-en>An <em>executive</em> with grit, a <em>lecturer</em> with purpose.</span>
+    </h2>
+
+    <div class="about">
+      <aside class="about-side">
+        <div class="id-card">
+          <div class="id-row"><span class="k" data-vi>Sinh năm</span><span class="k" data-en>Born</span><span class="v">1984 · Bình Định</span></div>
+          <div class="id-row"><span class="k" data-vi>Hiện sống</span><span class="k" data-en>Based</span><span class="v">Thủ Đức, HCMC</span></div>
+          <div class="id-row"><span class="k" data-vi>Học vấn</span><span class="k" data-en>Education</span><span class="v">MBA · MSc</span></div>
+          <div class="id-row"><span class="k" data-vi>Đào tạo tại</span><span class="k" data-en>Trained in</span><span class="v">Japan 🇯🇵</span></div>
+          <div class="id-row"><span class="k" data-vi>Gia đình</span><span class="k" data-en>Family</span><span class="v" data-vi>Đã kết hôn · 3 con</span><span class="v" data-en>Married · 3 children</span></div>
+          <div class="id-row"><span class="k" data-vi>Ngôn ngữ</span><span class="k" data-en>Languages</span><span class="v">Tiếng Việt · English</span></div>
+        </div>
+      </aside>
+
+      <div class="about-prose">
+        <p data-vi class="b">
+          Tôi là một nhà điều hành với hơn 18 năm kinh nghiệm trong quản lý kinh doanh và dự án — bao gồm các dự án phát triển hạ tầng quy mô lớn, các doanh nghiệp khởi nghiệp, và chương trình đào tạo nâng cao tại Nhật Bản. Tôi có chuyên môn vững vàng trong hoạch định chiến lược, vận hành tổ chức, và quản lý đổi mới sáng tạo.
+        </p>
+        <p data-en class="b">
+          I am an executive with over 18 years in business and project management — spanning large-scale infrastructure developments, startup ventures, and advanced training in Japan. My expertise lies in strategic planning, organisational operations, and innovation management.
+        </p>
+
+        <p data-vi class="b">
+          Xuyên suốt sự nghiệp, tôi đã dẫn dắt thành công các dự án quốc tế, xây dựng đội ngũ đa văn hoá, và đặc biệt tự hào về vai trò trong tuyến Metro số 1 Bến Thành – Suối Tiên — biểu tượng của bước chuyển mình hạ tầng đô thị TP.HCM.
+        </p>
+        <p data-en class="b">
+          Throughout my career I have led international projects, built diverse teams, and take particular pride in my role on the Bến Thành – Suối Tiên Metro Line No.1 — a symbol of Ho Chi Minh City's urban infrastructure transformation.
+        </p>
+
+        <p data-vi class="b">
+          Song song với điều hành doanh nghiệp, tôi giảng dạy tại các trường đại học — kết nối lý thuyết với thực tiễn, giúp sinh viên phát triển tư duy khởi nghiệp, năng lực phân tích, và sự tự tin lãnh đạo trong kỷ nguyên kinh doanh được dẫn dắt bởi công nghệ.
+        </p>
+        <p data-en class="b">
+          Alongside corporate leadership, I teach at universities — bridging theory and practice, helping students cultivate entrepreneurial thinking, analytical capability, and leadership confidence for today's technology-driven business landscape.
+        </p>
+
+        <blockquote class="pq">
+          <span data-vi>Kỹ sư cho tôi sự chính xác. Kinh doanh cho tôi tầm nhìn. Bục giảng cho tôi mục đích.</span>
+          <span data-en>Engineering gave me precision. Business gave me vision. The lecture hall gave me purpose.</span>
+          <cite>— N. N. Trang</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section class="highlights">
+  <div class="wrap">
+    <div class="eyebrow"><span data-vi>Năng lực cốt lõi</span><span data-en>Core strengths</span></div>
+    <h2 class="section-h serif">
+      <span data-vi>Sáu <em>thế mạnh</em> đã được kiểm chứng.</span>
+      <span data-en>Six <em>strengths</em> proven on the ground.</span>
+    </h2>
+
+    <div class="hl-grid">
+      <div class="hl-card">
+        <span class="n">01 / Project Mgmt</span>
+        <span class="t" data-vi>Quản lý dự án quy mô lớn — cả Agile lẫn Waterfall.</span>
+        <span class="t" data-en>Large-scale project leadership — Agile & Waterfall.</span>
+      </div>
+      <div class="hl-card">
+        <span class="n">02 / Strategy</span>
+        <span class="t" data-vi>Hoạch định và triển khai chiến lược cấp tổ chức.</span>
+        <span class="t" data-en>Strategic establishment & deployment at the org level.</span>
+      </div>
+      <div class="hl-card">
+        <span class="n">03 / Leadership</span>
+        <span class="t" data-vi>Lãnh đạo và xây dựng văn hoá doanh nghiệp.</span>
+        <span class="t" data-en>Leadership & corporate culture-building.</span>
+      </div>
+      <div class="hl-card">
+        <span class="n">04 / Entrepreneurship</span>
+        <span class="t" data-vi>Khởi nghiệp — từ ý tưởng đến vận hành thương mại.</span>
+        <span class="t" data-en>Entrepreneurship — from idea to commercial operation.</span>
+      </div>
+      <div class="hl-card">
+        <span class="n">05 / Finance</span>
+        <span class="t" data-vi>Tài chính khởi nghiệp · gọi vốn · dự báo dòng tiền.</span>
+        <span class="t" data-en>Entrepreneurial finance · fundraising · forecasting.</span>
+      </div>
+      <div class="hl-card">
+        <span class="n">06 / Communication</span>
+        <span class="t" data-vi>Trình bày trước hội trường lớn · Chủ tịch hội cựu sinh viên.</span>
+        <span class="t" data-en>Large-stage presentation · Alumni Chairman.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow"><span data-vi>Hành trình</span><span data-en>Career path</span></div>
+    <h2 class="section-h serif">
+      <span data-vi>Từ <em>công trường</em> đến <em>bục giảng</em>.</span>
+      <span data-en>From the <em>construction site</em> to the <em>lecture hall</em>.</span>
+    </h2>
+
+    <div class="exp">
+
+      <!-- 2022–Present : Lecturer -->
+      <article class="exp-item">
+        <div class="exp-when">2022 — <span class="now" data-vi>HIỆN TẠI</span><span class="now" data-en>NOW</span></div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Giảng viên — Quản lý dự án hạ tầng · Khởi nghiệp · Tài chính khởi nghiệp</h3>
+          <h3 class="exp-role serif" data-en>Lecturer — Infrastructure PM · Entrepreneurship · Startup Finance</h3>
+          <div class="exp-org">
+            <span data-vi>Đại học Cửu Long</span><span data-en>Mekong University</span>
+            <span class="sep">/</span>
+            <span data-vi>Đại học Quản lý & Công nghệ TP.HCM (UMT) — Thỉnh giảng</span>
+            <span data-en>UMT University — Visiting Lecturer</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Thiết kế và giảng dạy các môn liên ngành: kỹ thuật + chiến lược kinh doanh + nguyên lý tài chính, trang bị cho sinh viên kỹ năng vận hành các dự án và start-up phức tạp.</span><span data-en class="li">Designed and delivered cross-disciplinary courses combining engineering, business strategy and financial principles, equipping students for complex projects and startup ventures.</span></li>
+            <li><span data-vi class="li">Mang kinh nghiệm thực tế từ thi công cầu đường, móng, hạ tầng vào các bài giảng — biến tài liệu sách giáo khoa thành case study sống động.</span><span data-en class="li">Brought hands-on bridge, foundation and road-design experience into classroom case studies, turning textbook theory into lived practice.</span></li>
+            <li><span data-vi class="li">Huấn luyện tư duy khởi nghiệp: nhận diện cơ hội, mô hình kinh doanh, validation thị trường, kêu gọi đầu tư.</span><span data-en class="li">Coached entrepreneurial mindsets: opportunity recognition, business-model innovation, market validation and investor engagement.</span></li>
+            <li><span data-vi class="li">Chuyên môn: Project Management · Entrepreneurship · Startup Finance · Sales Management · Leadership · International Business.</span><span data-en class="li">Specialisations: Project Management · Entrepreneurship · Startup Finance · Sales Management · Leadership · International Business.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2020–Present : Strategic Director -->
+      <article class="exp-item">
+        <div class="exp-when">2020 — <span class="now" data-vi>HIỆN TẠI</span><span class="now" data-en>NOW</span></div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Giám đốc Chiến lược</h3>
+          <h3 class="exp-role serif" data-en>Strategic Director</h3>
+          <div class="exp-org">My Nhat Viet Electrical Engineering JSC <span class="sep">/</span> Picasso Group Corporation</div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Hoạch định và thực thi chiến lược thống nhất với mục tiêu của hội đồng quản trị và cổ đông.</span><span data-en class="li">Developed and executed strategies aligned with board and shareholder goals.</span></li>
+            <li><span data-vi class="li">Dẫn dắt đội ngũ quản lý cấp cao, tư vấn hội đồng về đánh giá và hoạch định thị trường.</span><span data-en class="li">Led senior management teams, advised boards on market assessment and planning.</span></li>
+            <li><span data-vi class="li">Giám sát tài chính và đầu tư, triển khai kế hoạch kinh doanh tiết kiệm chi phí; thực thi chính sách, tuân thủ pháp lý và quản trị nhân sự.</span><span data-en class="li">Oversaw finance and investment; enforced policies, legal compliance and HR governance.</span></li>
+            <li><span data-vi class="li">Tăng trưởng doanh thu nhất quán thông qua hệ thống KPIs/OKRs; định hướng vận hành dựa trên dữ liệu và công nghệ.</span><span data-en class="li">Delivered consistent revenue growth via a KPI/OKR system; led tech-driven operations.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2016–2021 : Mitsubishi -->
+      <article class="exp-item">
+        <div class="exp-when">06/2016 — 03/2021</div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Phó Giám đốc Dự án · Giám đốc Vận hành</h3>
+          <h3 class="exp-role serif" data-en>Deputy Project Manager · Operations Director</h3>
+          <div class="exp-org">P.S. Mitsubishi Construction Co., Ltd. <span class="sep">/</span> <span data-vi>Tuyến Metro Bến Thành – Suối Tiên (Line No.1)</span><span data-en>Bến Thành – Suối Tiên Metro Line No.1</span></div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Lãnh đạo các dự án hạ tầng trọng điểm tại Việt Nam, tập trung vào hoạch định chiến lược và tối ưu hoá nguồn lực.</span><span data-en class="li">Led major infrastructure projects in Vietnam, focused on strategic planning and resource optimisation.</span></li>
+            <li><span data-vi class="li">Phối hợp với các đội kỹ sư quốc tế (Nhật Bản, Việt Nam) trong cải tạo và xây dựng quy mô lớn.</span><span data-en class="li">Coordinated international engineering teams (Japan, Vietnam) on large-scale renovations and construction.</span></li>
+            <li><span data-vi class="li">Triển khai công nghệ xây dựng tiên tiến của Nhật Bản — nâng cao hiệu quả thi công và chất lượng.</span><span data-en class="li">Implemented advanced Japanese construction technologies — improving execution and quality.</span></li>
+            <li><span data-vi class="li">Quản lý ngân sách, logistics và chuỗi cung ứng; đạt ROI mang tính kỷ lục cho dự án quốc gia trọng điểm.</span><span data-en class="li">Managed budgeting, logistics and supply chain; achieved record-breaking ROI on a nationally significant project.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2013–2016 : Fico Pan-United -->
+      <article class="exp-item">
+        <div class="exp-when">12/2013 — 04/2016</div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Trưởng ca Sản xuất · Quản lý Logistics</h3>
+          <h3 class="exp-role serif" data-en>Roster Production Duty Manager · Logistics Manager</h3>
+          <div class="exp-org">Fico Pan-United Concrete JSC</div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Chịu trách nhiệm toàn diện về lợi nhuận dự án; áp dụng tư duy kinh doanh chiến lược vào lĩnh vực xây dựng.</span><span data-en class="li">Fully accountable for project profitability; applied a strategic business mindset to construction.</span></li>
+            <li><span data-vi class="li">Tối ưu năng lực sản xuất, quản lý chất lượng nghiêm ngặt và kiểm soát chi phí nhân công/nguyên vật liệu.</span><span data-en class="li">Optimised production capacity, enforced quality control and managed labour + raw-material costs.</span></li>
+            <li><span data-vi class="li">Đạt mức tăng trưởng doanh số trên 200% nhờ điều phối các bên liên quan và sáng kiến chiến lược.</span><span data-en class="li">Achieved 200%+ sales growth through stakeholder coordination and strategic initiatives.</span></li>
+            <li><span data-vi class="li">Hỗ trợ dự án đạt chứng chỉ LEED Platinum — minh chứng cam kết phát triển bền vững.</span><span data-en class="li">Supported projects in attaining LEED Platinum — demonstrating sustainability commitment.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2010–2013 : Beton 6 -->
+      <article class="exp-item">
+        <div class="exp-when">2010 — 2013</div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Quản lý Tư vấn Xây dựng</h3>
+          <h3 class="exp-role serif" data-en>Construction Consulting Manager</h3>
+          <div class="exp-org">Beton6 Corporation</div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Dẫn dắt nhiều dự án xây dựng với trọng tâm hoạch định chiến lược, chất lượng và hiệu suất.</span><span data-en class="li">Led construction projects with a focus on strategic planning, quality and efficiency.</span></li>
+            <li><span data-vi class="li">Chủ động nhận diện và xử lý sớm các thách thức, tránh chậm tiến độ và đội vốn.</span><span data-en class="li">Proactively addressed construction challenges, avoiding delays and cost overruns.</span></li>
+            <li><span data-vi class="li">Áp dụng nguyên lý kiểm soát chi phí và sản xuất tinh gọn (lean) trong vận hành.</span><span data-en class="li">Applied cost-control and lean-production principles in daily operations.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2007–2012 : Bouygues + Obayashi -->
+      <article class="exp-item">
+        <div class="exp-when">2007 — 2012</div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Kỹ sư Chất lượng · Kỹ sư Hiện trường</h3>
+          <h3 class="exp-role serif" data-en>Quality Engineer · Site Engineer</h3>
+          <div class="exp-org">Bouygues Bâtiment International (Saigon M&amp;C Tower) <span class="sep">/</span> Obayashi Corporation (Thủ Thiêm Tunnel)</div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Phụ trách Kỹ sư Chất lượng 3 năm 5 tháng cho dự án toà tháp Saigon M&amp;C — một trong những công trình cao tầng biểu tượng của TP.HCM.</span><span data-en class="li">Quality Engineer for 3 years 5 months on the Saigon M&amp;C Tower — an iconic HCMC skyscraper.</span></li>
+            <li><span data-vi class="li">Kỹ sư hiện trường cho dự án Cao tốc Đông Tây Sài Gòn (Đường hầm Thủ Thiêm) — sử dụng công nghệ hầm dìm tiên tiến.</span><span data-en class="li">Site Engineer for the Saigon East-West Highway (Thủ Thiêm Tunnel) — using advanced immersed-tunnel methodology.</span></li>
+            <li><span data-vi class="li">Hợp tác với các nhà thầu hàng đầu châu Âu và châu Á; quản lý nhà cung cấp quốc tế và giám sát chất lượng vật liệu.</span><span data-en class="li">Collaborated with top European and Asian contractors; managed global suppliers and quality assurance.</span></li>
+            <li><span data-vi class="li">Thành thạo lập trình VBA và AutoLISP để tự động hoá thiết kế cầu đường — kết hợp kỹ thuật với tư duy hệ thống.</span><span data-en class="li">Proficient in VBA and AutoLISP coding for bridge/road design automation — fusing engineering with systems thinking.</span></li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow"><span data-vi>Học vấn</span><span data-en>Education</span></div>
+    <h2 class="section-h serif">
+      <span data-vi><em>Học</em> không bao giờ ngừng.</span>
+      <span data-en>Always <em>learning</em>.</span>
+    </h2>
+
+    <div class="edu">
+      <div class="edu-card">
+        <div class="yr">2021 — 2023</div>
+        <div class="deg serif" data-vi>Thạc sĩ Quản trị Kinh doanh (MBA)</div>
+        <div class="deg serif" data-en>Master of Business Administration (MBA)</div>
+        <div class="sch" data-vi>Columbia Southern University · Hoa Kỳ</div>
+        <div class="sch" data-en>Columbia Southern University · USA</div>
+        <div class="ach" data-vi>Sinh viên xuất sắc · GPA 4.0/4.0</div>
+        <div class="ach" data-en>Excellent Student · Straight A · GPA 4.0/4.0</div>
+      </div>
+      <div class="edu-card">
+        <div class="yr">2011 — 2013</div>
+        <div class="deg serif" data-vi>Thạc sĩ Kỹ thuật Xây dựng (MSc)</div>
+        <div class="deg serif" data-en>Master of Science · Civil Engineering</div>
+        <div class="sch" data-vi>Đại học Giao thông Vận tải · Việt Nam</div>
+        <div class="sch" data-en>University of Transport and Communications · Vietnam</div>
+      </div>
+      <div class="edu-card">
+        <div class="yr">2002 — 2007</div>
+        <div class="deg serif" data-vi>Kỹ sư Xây dựng</div>
+        <div class="deg serif" data-en>Bachelor of Civil Engineering</div>
+        <div class="sch" data-vi>Đại học Giao thông Vận tải · Việt Nam</div>
+        <div class="sch" data-en>University of Transport and Communications · Vietnam</div>
+        <div class="ach" data-vi>Sinh viên xuất sắc · GPA 9.0/10</div>
+        <div class="ach" data-en>Excellent senior-year student · GPA 9.0/10</div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <div class="eyebrow"><span data-vi>Chứng chỉ & đào tạo</span><span data-en>Certifications & training</span></div>
+      <div class="skills-grid">
+        <div class="skill"><div class="t" data-vi>Đào tạo nâng cao tại Nhật Bản</div><div class="t" data-en>Advanced training in Japan</div><div class="d">P.S. Mitsubishi · 2016–2017</div></div>
+        <div class="skill"><div class="t">Internal Auditor ISO 9001:2015</div><div class="d">Bureau Veritas · 2017</div></div>
+        <div class="skill"><div class="t" data-vi>Quản lý điểm thay đổi</div><div class="t" data-en>Change Point Management</div><div class="d">IMTC · 2018</div></div>
+        <div class="skill"><div class="t" data-vi>Chứng chỉ Nghiệp vụ Sư phạm Đại học</div><div class="t" data-en>University Lecturer Certification</div><div class="d" data-vi>Đại học Sư phạm Huế · 2022 · Loại Giỏi</div><div class="d" data-en>Hue University of Education · 2022 · Distinction</div></div>
+        <div class="skill"><div class="t" data-vi>Chứng chỉ Hành nghề Xây dựng (Hạng I)</div><div class="t" data-en>Construction Practice Certificate (Class I)</div><div class="d" data-vi>Bộ Xây dựng · 2025–2030</div><div class="d" data-en>MoC Vietnam · 2025–2030</div></div>
+        <div class="skill"><div class="t" data-vi>Cố vấn Khởi nghiệp Đồng Nam Bộ</div><div class="t" data-en>Startup Mentor — Southern Region</div><div class="d">VCCI · 2023</div></div>
+        <div class="skill"><div class="t" data-vi>Digital Marketing Trực tuyến</div><div class="t" data-en>Online Digital Marketing</div><div class="d">VCCI × Meta · 2023</div></div>
+        <div class="skill"><div class="t" data-vi>Diễn giả — Hội nghị ATGT Việt Nam</div><div class="t" data-en>Speaker — Vietnam Traffic Safety Conf.</div><div class="d" data-vi>Uỷ ban ATGT Quốc gia · 2021 & 2023</div><div class="d" data-en>National Traffic Safety Committee · 2021 & 2023</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 class="serif">
+      <span data-vi>Hãy <b>nói chuyện.</b></span>
+      <span data-en>Let's <b>talk.</b></span>
+    </h2>
+    <p style="font-size:18px;line-height:1.6;max-width:680px;color:rgba(245,239,226,.8);margin-bottom:8px">
+      <span data-vi>Tôi luôn sẵn sàng cho các cơ hội điều hành cấp cao, vai trò giám đốc dự án hạ tầng, và các cuộc trò chuyện về tư vấn chiến lược, khởi nghiệp, hay giảng dạy.</span>
+      <span data-en>Open to senior executive opportunities, infrastructure project leadership roles, and strategic-advisory, entrepreneurship or lecturing conversations.</span>
+    </p>
+
+    <div class="contact-grid">
+      <div class="c-block">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:n2trang@gmail.com">n2trang@gmail.com</a></div>
+      </div>
+      <div class="c-block">
+        <div class="k" data-vi>Điện thoại · WhatsApp · Zalo</div>
+        <div class="k" data-en>Phone · WhatsApp · Zalo</div>
+        <div class="v"><a href="tel:+84902637775">+84 902 637 775</a></div>
+      </div>
+      <div class="c-block">
+        <div class="k">LinkedIn</div>
+        <div class="v"><a href="http://bit.ly/48U7eh8" target="_blank" rel="noopener">Nguyen Ngoc Trang MBA, MSc</a></div>
+      </div>
+      <div class="c-block">
+        <div class="k" data-vi>Địa điểm</div>
+        <div class="k" data-en>Location</div>
+        <div class="v" data-vi>Thủ Đức · TP. Hồ Chí Minh · Việt Nam</div>
+        <div class="v" data-en>Thủ Đức · Ho Chi Minh City · Vietnam</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="left">© <span id="yr"></span> · <b>Nguyễn Ngọc Trang</b> · <span data-vi>Đã xây tay bằng HTML & sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
+    <div class="right mono">v1.0 · HCMC</div>
+  </div>
+</footer>
+
+<script>
+// Year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Lang toggle
+function toggleLang(){
+  const cur = document.documentElement.getAttribute('data-lang');
+  const next = cur === 'vi' ? 'en' : 'vi';
+  document.documentElement.setAttribute('data-lang', next);
+  document.documentElement.setAttribute('lang', next);
+  document.getElementById('lvi').classList.toggle('active', next === 'vi');
+  document.getElementById('len').classList.toggle('active', next === 'en');
+  try { localStorage.setItem('lang', next); } catch(e){}
+}
+// Restore lang
+try {
+  const saved = localStorage.getItem('lang');
+  if (saved === 'en') toggleLang();
+} catch(e){}
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.12 });
+document.querySelectorAll('section, .exp-item, .edu-card, .skill, .hl-card').forEach(el => {
+  el.classList.add('reveal');
+  io.observe(el);
+});
+</script>
+
+</body>
+</html>
