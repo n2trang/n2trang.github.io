@@ -302,6 +302,7 @@ section{padding:80px 0;position:relative}
   border:1px solid var(--line);padding:20px;
   background:rgba(255,255,255,.4);
   transition:all .25s ease;
+  position:relative;
 }
 .skill:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--vermillion)}
 .skill .t{font-family:"Fraunces",serif;font-weight:500;font-size:18px;margin-bottom:6px}
@@ -309,7 +310,6 @@ section{padding:80px 0;position:relative}
 .skill:hover .d{color:rgba(245,239,226,.7)}
 .skill-feat{border-left:3px solid var(--gold);background:rgba(184,136,66,.08)}
 .skill-feat::after{content:"🇯🇵 Japan";position:absolute;top:10px;right:14px;font-size:10px;letter-spacing:.1em;color:var(--gold);font-weight:600}
-.skill-feat{position:relative}
 
 /* Publications */
 .pub-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -735,7 +735,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       <div class="skills-grid">
         <div class="skill skill-feat"><div class="t" data-vi>Đào tạo nâng cao tại Nhật Bản</div><div class="t" data-en>Advanced training in Japan</div><div class="d" data-vi>P.S. Mitsubishi · 2016–2017 · Quản lý dự án, Sản xuất, Dự toán, Kaizen 5S</div><div class="d" data-en>P.S. Mitsubishi · 2016–2017 · Project Mgmt, Production, Cost Estimation, Kaizen 5S</div></div>
         <div class="skill"><div class="t" data-vi>Năng lực thực thi cam kết quốc tế về Thương mại & Đầu tư</div><div class="t" data-en>Capacity Building: Trade &amp; Investment Commitments</div><div class="d" data-vi>WTO Chairs Programme · Đại học Ngoại thương (FTU) · 2023</div><div class="d" data-en>WTO Chairs Programme · Foreign Trade University · 2023</div></div>
-        <div class="skill"><div class="t">Internal Auditor ISO 9001:2015</div><div class="d">Bureau Veritas · 2017</div></div>
+        <div class="skill"><div class="t" data-vi>Đánh giá viên Nội bộ ISO 9001:2015</div><div class="t" data-en>Internal Auditor ISO 9001:2015</div><div class="d">Bureau Veritas · 2017</div></div>
         <div class="skill"><div class="t" data-vi>Quản lý điểm thay đổi</div><div class="t" data-en>Change Point Management</div><div class="d">IMTC · 2018</div></div>
         <div class="skill"><div class="t" data-vi>Chứng chỉ Nghiệp vụ Sư phạm Đại học</div><div class="t" data-en>University Lecturer Certification</div><div class="d" data-vi>Đại học Sư phạm Huế · 2022 · Loại Giỏi</div><div class="d" data-en>Hue University of Education · 2022 · Distinction</div></div>
         <div class="skill"><div class="t" data-vi>Chứng chỉ Hành nghề Xây dựng (Hạng I)</div><div class="t" data-en>Construction Practice Certificate (Class I)</div><div class="d" data-vi>Bộ Xây dựng · 2025–2030</div><div class="d" data-en>MoC Vietnam · 2025–2030</div></div>
@@ -786,31 +786,32 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
     <div class="media-grid">
       <figure class="media-slot">
         <img src="images/gallery-1.jpg" alt="" loading="lazy" />
-        <figcaption data-vi>Dr. Joe Manjone & Dr. Elwin Jones thăm Hội Cựu Học viên VN </figcaption><figcaption data-en>Dr. Joe Manjone & Dr. Elwin Jones visited Alumni</figcaption>
-      </figure>
-      <figure class="media-slot">
-        <img src="images/gallery-2.jpg" alt="" loading="lazy" />
-        <figcaption data-vi>Lễ Tốt nghiệp (23.04.2023)</figcaption><figcaption data-en>Commencement Ceremony (23.04.2023)</figcaption>
+        <figcaption data-vi>Dr. Joe Manjone &amp; Dr. Elwin Jones thăm Hội Cựu Học viên CSU Việt Nam</figcaption><figcaption data-en>Dr. Joe Manjone &amp; Dr. Elwin Jones visiting the CSU VN Alumni Chapter</figcaption>
       </figure>
       <figure class="media-slot">
         <img src="images/gallery-3.jpg" alt="" loading="lazy" />
         <figcaption data-vi>Coffee Talk #1</figcaption><figcaption data-en>Coffee Talk #1</figcaption>
       </figure>
       <figure class="media-slot">
+        <img src="images/gallery-6.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Lễ kỷ niệm Ngày Truyền thống đầu tiên</figcaption><figcaption data-en>First Traditional Day</figcaption>
+      </figure>
+      <figure class="media-slot">
         <img src="images/gallery-4.jpg" alt="" loading="lazy" />
-        <figcaption data-vi>Tất niên Hội Cựu Học viên CSU VN</figcaption><figcaption data-en>Alumni YEP (Pool's Party)</figcaption>
+        <figcaption data-vi>Tiệc tất niên Hội Cựu Học viên CSU Việt Nam (Pool Party)</figcaption><figcaption data-en>Alumni Year-End Party (Pool Party)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-2.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Lễ Tốt nghiệp (23.04.2023)</figcaption><figcaption data-en>Commencement Ceremony (23.04.2023)</figcaption>
       </figure>
       <figure class="media-slot">
         <img src="images/gallery-5.jpg" alt="" loading="lazy" />
-        <figcaption data-vi>Hội Cựu Sinh viên CSU gặp gỡ đầu tiên</figcaption><figcaption data-en>First Gathering CSU Alumni HCM</figcaption>
-      </figure>
-      <figure class="media-slot">
-        <img src="images/gallery-6.jpg" alt="" loading="lazy" />
-        <figcaption data-vi>Ngày Hội truyền thống đầu tiên</figcaption><figcaption data-en>First Traditional Day</figcaption>
+        <figcaption data-vi>Buổi gặp mặt đầu tiên — Hội Cựu Sinh viên CSU TP.HCM</figcaption><figcaption data-en>First Gathering — CSU Alumni HCM</figcaption>
       </figure>
     </div>
   </div>
 </section>
+
 <section id="contact" class="contact">
   <div class="wrap">
     <h2 class="serif">
@@ -849,8 +850,8 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap foot">
-    <div class="left">© <span id="yr"></span> · <b>Nguyễn Ngọc Trang</b> · <span data-vi>Đã xây tay bằng HTML & sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
-    <div class="right mono">v1.1 · Ho Chi Minh City</div>
+    <div class="left">© <span id="yr"></span> · <b>Nguyễn Ngọc Trang</b> · <span data-vi>Đã xây tay bằng HTML &amp; sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
+    <div class="right mono">v1.3 · Ho Chi Minh City</div>
   </div>
 </footer>
 
