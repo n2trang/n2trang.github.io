@@ -248,6 +248,10 @@ section{padding:80px 0;position:relative}
   display:inline-block;background:var(--vermillion);color:var(--paper);
   padding:1px 6px;font-size:10px;margin-left:4px;letter-spacing:.12em;
 }
+/* Honor language toggle for inline .now labels */
+.exp-when .now[data-vi],.exp-when .now[data-en]{display:none}
+html[data-lang="vi"] .exp-when .now[data-vi]{display:inline-block}
+html[data-lang="en"] .exp-when .now[data-en]{display:inline-block}
 .exp-role{
   font-family:"Fraunces",serif;font-weight:500;font-size:26px;
   line-height:1.15;letter-spacing:-.01em;margin-bottom:6px;
@@ -270,8 +274,9 @@ section{padding:80px 0;position:relative}
 
 /* Selected highlights */
 .sel-highlights{margin-bottom:24px}
-.sel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
-@media(max-width:780px){.sel-grid{grid-template-columns:1fr}}
+.sel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+@media(max-width:1000px){.sel-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.sel-grid{grid-template-columns:1fr}}
 .sel-card{background:var(--paper-2);padding:28px;border-left:3px solid var(--vermillion)}
 .sel-card .exp-role{font-size:20px;margin-bottom:10px}
 .sel-card p{font-size:14px;line-height:1.55;color:var(--ink-soft)}
@@ -582,10 +587,33 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
           <p data-vi>Dẫn dắt đội ngũ chuyên gia làm chủ công nghệ sản xuất Nhật Bản cho một cấu kiện kết cấu cốt lõi của hệ thống đường ray metro, đưa dây chuyền sản xuất đạt tiêu chuẩn xuất khẩu quốc tế.</p>
           <p data-en>Led a team of engineers in mastering Japanese manufacturing technology for a core structural component of the metro track system, bringing the production line up to international export standard.</p>
         </div>
+        <div class="sel-card">
+          <h3 class="exp-role serif" data-vi>Đào tạo chuyên sâu tại Nhật Bản</h3>
+          <h3 class="exp-role serif" data-en>Advanced Training in Japan</h3>
+          <p data-vi>Hoàn thành chương trình đào tạo chuyên sâu tại P.S. Mitsubishi (Nhật Bản, 2016–2017) về Quản trị Dự án nâng cao, Quản lý Sản xuất, Dự toán Chi phí và phương pháp Kaizen 5S — nền tảng giúp triển khai chuẩn Nhật cho các dự án hạ tầng trọng điểm tại Việt Nam.</p>
+          <p data-en>Completed an intensive training program at P.S. Mitsubishi (Japan, 2016–2017) covering Advanced Project Management, Production Management, Cost Estimation and Kaizen 5S — the foundation for delivering Japanese-standard execution on Vietnam's key infrastructure projects.</p>
+        </div>
       </div>
     </div>
 
     <div class="exp">
+
+      <!-- 10/2025–Present : Senior Advisor Metro NSCR -->
+      <article class="exp-item">
+        <div class="exp-when">10/2025 — <span class="now" data-vi>HIỆN TẠI</span><span class="now" data-en>NOW</span></div>
+        <div>
+          <h3 class="exp-role serif" data-vi>Cố vấn Cấp cao — Chương trình Đường sắt Đô thị Bắc Nam (NSCR), Philippines</h3>
+          <h3 class="exp-role serif" data-en>Senior Advisor — North-South Commuter Railway (NSCR), Philippines</h3>
+          <div class="exp-org">
+            <span data-vi>Chương trình Đường sắt Đô thị Metro Manila</span><span data-en>Metro Manila Urban Railway Program</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-vi class="li">Cố vấn cho một trong những chương trình đường sắt đô thị lớn nhất Đông Nam Á về cả khía cạnh kỹ thuật lẫn thương mại trong việc xuất khẩu các cấu kiện đường ray đạt tiêu chuẩn châu Âu.</span><span data-en class="li">Advising one of Southeast Asia's largest urban-railway programs on both the engineering and commercial delivery of European-standard track components for export.</span></li>
+            <li><span data-vi class="li">Kết nối kinh nghiệm thực chiến từ tuyến Metro số 1 Bến Thành – Suối Tiên với yêu cầu kỹ thuật và vận hành của hệ thống NSCR.</span><span data-en class="li">Bridging hands-on experience from Bến Thành – Suối Tiên Metro Line No.1 with the engineering and operational requirements of the NSCR system.</span></li>
+            <li><span data-vi class="li">Tư vấn chiến lược cho việc chuyển giao công nghệ và bảo đảm chất lượng giữa các nhà thầu Nhật Bản – Việt Nam – Philippines.</span><span data-en class="li">Strategic advisory on technology transfer and quality assurance between Japanese, Vietnamese and Philippine contractors.</span></li>
+          </ul>
+        </div>
+      </article>
 
       <!-- 2022–Present : Lecturer -->
       <article class="exp-item">
@@ -851,7 +879,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
 <footer>
   <div class="wrap foot">
     <div class="left">© <span id="yr"></span> · <b>Nguyễn Ngọc Trang</b> · <span data-vi>Đã xây tay bằng HTML &amp; sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
-    <div class="right mono">v1.5 · Ho Chi Minh City</div>
+    <div class="right mono">v1.6 · Ho Chi Minh City</div>
   </div>
 </footer>
 
