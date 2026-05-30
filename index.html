@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nguyễn Ngọc Trang — CEO · Project Manager · Lecturer</title>
-<meta name="description" content="Nguyễn Ngọc Trang — Hồ sơ điều hành, quản lý dự án hạ tầng, khởi nghiệp và giảng dạy đại học. 18+ năm kinh nghiệm, MBA & MSc, Metroline Bến Thành – Suối Tiên." />
-<meta property="og:title" content="Nguyễn Ngọc Trang — CEO · Project Manager · Lecturer" />
-<meta property="og:description" content="18+ years P&L leadership, infrastructure project management & university lecturing. MBA & MSc." />
+<title>Nguyễn Ngọc Trang · CEO · Project Manager · Lecturer</title>
+<meta name="description" content="Nguyễn Ngọc Trang. Hồ sơ điều hành, quản lý dự án hạ tầng, khởi nghiệp và giảng dạy đại học. Gần hai thập kỷ kinh nghiệm, MBA & MSc, Metroline Bến Thành – Suối Tiên." />
+<meta property="og:title" content="Nguyễn Ngọc Trang · CEO · Project Manager · Lecturer" />
+<meta property="og:description" content="Nearly two decades of P&L leadership, infrastructure project management & university lecturing. MBA & MSc." />
 <meta property="og:image" content="images/profile.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -268,6 +268,14 @@ section{padding:80px 0;position:relative}
   width:6px;height:6px;background:var(--cobalt);
 }
 
+/* Selected highlights */
+.sel-highlights{margin-bottom:24px}
+.sel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+@media(max-width:780px){.sel-grid{grid-template-columns:1fr}}
+.sel-card{background:var(--paper-2);padding:28px;border-left:3px solid var(--vermillion)}
+.sel-card .exp-role{font-size:20px;margin-bottom:10px}
+.sel-card p{font-size:14px;line-height:1.55;color:var(--ink-soft)}
+
 /* Education */
 .edu{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
 @media(max-width:780px){.edu{grid-template-columns:1fr}}
@@ -299,6 +307,24 @@ section{padding:80px 0;position:relative}
 .skill .t{font-family:"Fraunces",serif;font-weight:500;font-size:18px;margin-bottom:6px}
 .skill .d{font-size:13px;color:var(--muted)}
 .skill:hover .d{color:rgba(245,239,226,.7)}
+.skill-feat{border-left:3px solid var(--gold);background:rgba(184,136,66,.08)}
+.skill-feat::after{content:"🇯🇵 Japan";position:absolute;top:10px;right:14px;font-size:10px;letter-spacing:.1em;color:var(--gold);font-weight:600}
+.skill-feat{position:relative}
+
+/* Publications */
+.pub-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:780px){.pub-list{grid-template-columns:1fr}}
+.pub{border:1px solid var(--line);padding:20px;background:rgba(255,255,255,.4);border-left:3px solid var(--cobalt)}
+.pub-t{font-weight:500;font-size:18px;line-height:1.25;margin-bottom:8px}
+.pub-m{font-size:13px;color:var(--muted);font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+
+/* Media gallery (volunteer) */
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.media-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.media-grid{grid-template-columns:1fr}}
+.media-slot{border:1px solid var(--line);background:var(--paper-2)}
+.media-slot img,.media-slot iframe{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--paper-2);display:block}
+.media-slot figcaption{padding:10px 14px;font-size:13px;color:var(--ink-soft)}
 
 /* Contact */
 .contact{background:var(--ink);color:var(--paper);margin:0 -28px;padding:100px 28px}
@@ -369,6 +395,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       <a href="#about"><span data-vi>Giới thiệu</span><span data-en>About</span></a>
       <a href="#experience"><span data-vi>Kinh nghiệm</span><span data-en>Experience</span></a>
       <a href="#education"><span data-vi>Học vấn</span><span data-en>Education</span></a>
+      <a href="#volunteer"><span data-vi>Cộng đồng</span><span data-en>Volunteer</span></a>
       <a href="#contact"><span data-vi>Liên hệ</span><span data-en>Contact</span></a>
     </div>
     <button class="lang-toggle" onclick="toggleLang()">
@@ -392,16 +419,17 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
           <span class="em">Ngọc</span> <span class="accent">Trang.</span>
         </h1>
         <div class="hero-roles">
-          <em>CEO</em> · <em>Project Manager</em> · <em>University Lecturer</em>
+          <span data-vi><em>Tổng Giám đốc</em> · <em>Giám đốc Dự án</em> · <em>Giảng viên Đại học</em></span>
+          <span data-en><em>CEO</em> · <em>Project Manager</em> · <em>University Lecturer</em></span>
         </div>
         <p class="hero-tagline">
-          <span data-vi>Hơn 18 năm dẫn dắt các dự án hạ tầng quy mô lớn, doanh nghiệp khởi nghiệp, và truyền cảm hứng cho thế hệ doanh nhân kế tiếp.</span>
-          <span data-en>Over 18 years leading large-scale infrastructure projects, startup ventures, and inspiring the next generation of entrepreneurs.</span>
+          <span data-vi>Gần hai thập kỷ dẫn dắt các dự án hạ tầng quy mô lớn, doanh nghiệp khởi nghiệp, và truyền cảm hứng cho thế hệ doanh nhân kế tiếp.</span>
+          <span data-en>Nearly two decades leading large-scale infrastructure projects, startup ventures, and inspiring the next generation of entrepreneurs.</span>
         </p>
       </div>
       <div class="hero-portrait reveal in">
         <img src="images/profile.jpg" alt="Nguyễn Ngọc Trang" />
-        <div class="portrait-tag">HCMC · 1984</div>
+        <div class="portrait-tag">HO CHI MINH CITY · 1984</div>
       </div>
     </div>
   </div>
@@ -411,7 +439,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
 <div class="wrap">
   <div class="stats">
     <div class="stat">
-      <div class="num">18<sup>+</sup></div>
+      <div class="num">19<sup>+</sup></div>
       <div class="lbl" data-vi>Năm kinh nghiệm</div>
       <div class="lbl" data-en>Years experience</div>
     </div>
@@ -445,41 +473,41 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
     <div class="about">
       <aside class="about-side">
         <div class="id-card">
-          <div class="id-row"><span class="k" data-vi>Sinh năm</span><span class="k" data-en>Born</span><span class="v">1984 · Bình Định</span></div>
-          <div class="id-row"><span class="k" data-vi>Hiện sống</span><span class="k" data-en>Based</span><span class="v">Thủ Đức, HCMC</span></div>
+          <div class="id-row"><span class="k" data-vi>Sinh năm</span><span class="k" data-en>Born</span><span class="v">1984 · Gia Lai</span></div>
+          <div class="id-row"><span class="k" data-vi>Hiện sống</span><span class="k" data-en>Based</span><span class="v" data-vi>Hồ Chí Minh</span><span class="v" data-en>Ho Chi Minh</span></div>
           <div class="id-row"><span class="k" data-vi>Học vấn</span><span class="k" data-en>Education</span><span class="v">MBA · MSc</span></div>
           <div class="id-row"><span class="k" data-vi>Đào tạo tại</span><span class="k" data-en>Trained in</span><span class="v">Japan 🇯🇵</span></div>
           <div class="id-row"><span class="k" data-vi>Gia đình</span><span class="k" data-en>Family</span><span class="v" data-vi>Đã kết hôn · 3 con</span><span class="v" data-en>Married · 3 children</span></div>
-          <div class="id-row"><span class="k" data-vi>Ngôn ngữ</span><span class="k" data-en>Languages</span><span class="v">Tiếng Việt · English</span></div>
+          <div class="id-row"><span class="k" data-vi>Ngôn ngữ</span><span class="k" data-en>Languages</span><span class="v" data-vi>Tiếng Việt · English · Deutsch (A2) · 日本語 (N5)</span><span class="v" data-en>Vietnamese · English · German (A2) · Japanese (N5)</span></div>
         </div>
       </aside>
 
       <div class="about-prose">
         <p data-vi class="b">
-          Tôi là một nhà điều hành với hơn 18 năm kinh nghiệm trong quản lý kinh doanh và dự án — bao gồm các dự án phát triển hạ tầng quy mô lớn, các doanh nghiệp khởi nghiệp, và chương trình đào tạo nâng cao tại Nhật Bản. Tôi có chuyên môn vững vàng trong hoạch định chiến lược, vận hành tổ chức, và quản lý đổi mới sáng tạo.
+          Tôi là một nhà điều hành với gần hai thập kỷ kinh nghiệm trong quản lý kinh doanh và dự án, trải rộng từ các dự án phát triển hạ tầng quy mô lớn, doanh nghiệp khởi nghiệp đến chương trình đào tạo nâng cao tại Nhật Bản. Chuyên môn của tôi nằm ở hoạch định chiến lược, vận hành tổ chức và quản lý đổi mới sáng tạo.
         </p>
         <p data-en class="b">
-          I am an executive with over 18 years in business and project management — spanning large-scale infrastructure developments, startup ventures, and advanced training in Japan. My expertise lies in strategic planning, organisational operations, and innovation management.
+          I am an executive with nearly two decades in business and project management, spanning large-scale infrastructure developments, startup ventures and advanced training in Japan. My expertise lies in strategic planning, organisational operations and innovation management.
         </p>
 
         <p data-vi class="b">
-          Xuyên suốt sự nghiệp, tôi đã dẫn dắt thành công các dự án quốc tế, xây dựng đội ngũ đa văn hoá, và đặc biệt tự hào về vai trò trong tuyến Metro số 1 Bến Thành – Suối Tiên — biểu tượng của bước chuyển mình hạ tầng đô thị TP.HCM.
+          Xuyên suốt sự nghiệp, tôi đã dẫn dắt thành công các dự án quốc tế, xây dựng đội ngũ đa văn hoá, và đặc biệt tự hào về vai trò trong tuyến Metro số 1 Bến Thành – Suối Tiên, biểu tượng cho bước chuyển mình hạ tầng đô thị TP.HCM.
         </p>
         <p data-en class="b">
-          Throughout my career I have led international projects, built diverse teams, and take particular pride in my role on the Bến Thành – Suối Tiên Metro Line No.1 — a symbol of Ho Chi Minh City's urban infrastructure transformation.
+          Throughout my career I have led international projects, built diverse teams, and take particular pride in my role on the Bến Thành – Suối Tiên Metro Line No.1, a symbol of Ho Chi Minh City's urban infrastructure transformation.
         </p>
 
         <p data-vi class="b">
-          Song song với điều hành doanh nghiệp, tôi giảng dạy tại các trường đại học — kết nối lý thuyết với thực tiễn, giúp sinh viên phát triển tư duy khởi nghiệp, năng lực phân tích, và sự tự tin lãnh đạo trong kỷ nguyên kinh doanh được dẫn dắt bởi công nghệ.
+          Song song với điều hành doanh nghiệp, tôi giảng dạy tại các trường đại học, nơi lý thuyết được kết nối với thực tiễn, giúp sinh viên phát triển tư duy khởi nghiệp, năng lực phân tích và sự tự tin lãnh đạo trong kỷ nguyên kinh doanh được dẫn dắt bởi công nghệ.
         </p>
         <p data-en class="b">
-          Alongside corporate leadership, I teach at universities — bridging theory and practice, helping students cultivate entrepreneurial thinking, analytical capability, and leadership confidence for today's technology-driven business landscape.
+          Alongside corporate leadership, I teach at universities, bridging theory and practice while helping students cultivate entrepreneurial thinking, analytical capability and leadership confidence for today's technology-driven business landscape.
         </p>
 
         <blockquote class="pq">
           <span data-vi>Kỹ sư cho tôi sự chính xác. Kinh doanh cho tôi tầm nhìn. Bục giảng cho tôi mục đích.</span>
           <span data-en>Engineering gave me precision. Business gave me vision. The lecture hall gave me purpose.</span>
-          <cite>— N. N. Trang</cite>
+          <cite>N. N. Trang</cite>
         </blockquote>
       </div>
     </div>
@@ -498,8 +526,8 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
     <div class="hl-grid">
       <div class="hl-card">
         <span class="n">01 / Project Mgmt</span>
-        <span class="t" data-vi>Quản lý dự án quy mô lớn — cả Agile lẫn Waterfall.</span>
-        <span class="t" data-en>Large-scale project leadership — Agile & Waterfall.</span>
+        <span class="t" data-vi>Quản lý dự án quy mô lớn, cả Agile lẫn Waterfall.</span>
+        <span class="t" data-en>Large-scale project leadership across Agile & Waterfall.</span>
       </div>
       <div class="hl-card">
         <span class="n">02 / Strategy</span>
@@ -513,8 +541,8 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       </div>
       <div class="hl-card">
         <span class="n">04 / Entrepreneurship</span>
-        <span class="t" data-vi>Khởi nghiệp — từ ý tưởng đến vận hành thương mại.</span>
-        <span class="t" data-en>Entrepreneurship — from idea to commercial operation.</span>
+        <span class="t" data-vi>Khởi nghiệp: từ ý tưởng đến vận hành thương mại.</span>
+        <span class="t" data-en>Entrepreneurship: from idea to commercial operation.</span>
       </div>
       <div class="hl-card">
         <span class="n">05 / Finance</span>
@@ -523,8 +551,8 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       </div>
       <div class="hl-card">
         <span class="n">06 / Communication</span>
-        <span class="t" data-vi>Trình bày trước hội trường lớn · Chủ tịch hội cựu sinh viên.</span>
-        <span class="t" data-en>Large-stage presentation · Alumni Chairman.</span>
+        <span class="t" data-vi>Trình bày trước hội trường lớn · <a href="https://alumnicsu.org/thanh-lap-hoi-cuu-hoc-vien-dai-hoc-nam-columbia-csua/" target="_blank" rel="noopener" style="text-decoration:underline">Khởi xướng và thủ lĩnh Alumni VN</a>.</span>
+        <span class="t" data-en>Large-stage presentation · <a href="https://alumnicsu.org/thanh-lap-hoi-cuu-hoc-vien-dai-hoc-nam-columbia-csua/" target="_blank" rel="noopener" style="text-decoration:underline">Leader, CSUA VN Alumni Chapter</a>.</span>
       </div>
     </div>
   </div>
@@ -539,23 +567,41 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       <span data-en>From the <em>construction site</em> to the <em>lecture hall</em>.</span>
     </h2>
 
+    <div class="sel-highlights">
+      <div class="eyebrow"><span data-vi>Điểm nhấn nổi bật</span><span data-en>Selected highlights</span></div>
+      <div class="sel-grid">
+        <div class="sel-card">
+          <h3 class="exp-role serif" data-vi>Cố vấn Cấp cao, Chương trình Đường sắt Đô thị Metro Manila (Philippines)</h3>
+          <h3 class="exp-role serif" data-en>Senior Advisor, Metro Manila Urban Railway Program (Philippines)</h3>
+          <p data-vi>Tư vấn cho một trong những chương trình đường sắt đô thị lớn nhất Đông Nam Á về cả khía cạnh kỹ thuật lẫn thương mại trong việc xuất khẩu các cấu kiện đường ray đạt tiêu chuẩn châu Âu.</p>
+          <p data-en>Advising one of Southeast Asia's largest urban-railway programs on both the engineering and commercial delivery of its European-standard track components for export.</p>
+        </div>
+        <div class="sel-card">
+          <h3 class="exp-role serif" data-vi>Dẫn dắt đội ngũ chuyên gia chuyển giao công nghệ (Nhật Bản)</h3>
+          <h3 class="exp-role serif" data-en>Technology Transfer Lead (Japan)</h3>
+          <p data-vi>Dẫn dắt đội ngũ chuyên gia làm chủ công nghệ sản xuất Nhật Bản cho một cấu kiện kết cấu cốt lõi của hệ thống đường ray metro, đưa dây chuyền sản xuất đạt tiêu chuẩn xuất khẩu quốc tế.</p>
+          <p data-en>Led a team of engineers in mastering Japanese manufacturing technology for a core structural component of the metro track system, bringing the production line up to international export standard.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="exp">
 
       <!-- 2022–Present : Lecturer -->
       <article class="exp-item">
         <div class="exp-when">2022 — <span class="now" data-vi>HIỆN TẠI</span><span class="now" data-en>NOW</span></div>
         <div>
-          <h3 class="exp-role serif" data-vi>Giảng viên — Quản lý dự án hạ tầng · Khởi nghiệp · Tài chính khởi nghiệp</h3>
-          <h3 class="exp-role serif" data-en>Lecturer — Infrastructure PM · Entrepreneurship · Startup Finance</h3>
+          <h3 class="exp-role serif" data-vi>Giảng viên: Quản lý dự án hạ tầng · Khởi nghiệp · Tài chính khởi nghiệp</h3>
+          <h3 class="exp-role serif" data-en>Lecturer: Infrastructure PM · Entrepreneurship · Startup Finance</h3>
           <div class="exp-org">
             <span data-vi>Đại học Cửu Long</span><span data-en>Mekong University</span>
             <span class="sep">/</span>
-            <span data-vi>Đại học Quản lý & Công nghệ TP.HCM (UMT) — Thỉnh giảng</span>
-            <span data-en>UMT University — Visiting Lecturer</span>
+            <span data-vi>Đại học Quản lý & Công nghệ TP.HCM (UMT), Thỉnh giảng</span>
+            <span data-en>UMT University, Visiting Lecturer</span>
           </div>
           <ul class="exp-bullets">
             <li><span data-vi class="li">Thiết kế và giảng dạy các môn liên ngành: kỹ thuật + chiến lược kinh doanh + nguyên lý tài chính, trang bị cho sinh viên kỹ năng vận hành các dự án và start-up phức tạp.</span><span data-en class="li">Designed and delivered cross-disciplinary courses combining engineering, business strategy and financial principles, equipping students for complex projects and startup ventures.</span></li>
-            <li><span data-vi class="li">Mang kinh nghiệm thực tế từ thi công cầu đường, móng, hạ tầng vào các bài giảng — biến tài liệu sách giáo khoa thành case study sống động.</span><span data-en class="li">Brought hands-on bridge, foundation and road-design experience into classroom case studies, turning textbook theory into lived practice.</span></li>
+            <li><span data-vi class="li">Mang kinh nghiệm thực tế từ thi công cầu đường, móng, hạ tầng vào các bài giảng, biến lý thuyết sách giáo khoa thành case study sống động.</span><span data-en class="li">Brought hands-on bridge, foundation and road-design experience into classroom case studies, turning textbook theory into lived practice.</span></li>
             <li><span data-vi class="li">Huấn luyện tư duy khởi nghiệp: nhận diện cơ hội, mô hình kinh doanh, validation thị trường, kêu gọi đầu tư.</span><span data-en class="li">Coached entrepreneurial mindsets: opportunity recognition, business-model innovation, market validation and investor engagement.</span></li>
             <li><span data-vi class="li">Chuyên môn: Project Management · Entrepreneurship · Startup Finance · Sales Management · Leadership · International Business.</span><span data-en class="li">Specialisations: Project Management · Entrepreneurship · Startup Finance · Sales Management · Leadership · International Business.</span></li>
           </ul>
@@ -588,7 +634,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
           <ul class="exp-bullets">
             <li><span data-vi class="li">Lãnh đạo các dự án hạ tầng trọng điểm tại Việt Nam, tập trung vào hoạch định chiến lược và tối ưu hoá nguồn lực.</span><span data-en class="li">Led major infrastructure projects in Vietnam, focused on strategic planning and resource optimisation.</span></li>
             <li><span data-vi class="li">Phối hợp với các đội kỹ sư quốc tế (Nhật Bản, Việt Nam) trong cải tạo và xây dựng quy mô lớn.</span><span data-en class="li">Coordinated international engineering teams (Japan, Vietnam) on large-scale renovations and construction.</span></li>
-            <li><span data-vi class="li">Triển khai công nghệ xây dựng tiên tiến của Nhật Bản — nâng cao hiệu quả thi công và chất lượng.</span><span data-en class="li">Implemented advanced Japanese construction technologies — improving execution and quality.</span></li>
+            <li><span data-vi class="li">Triển khai công nghệ xây dựng tiên tiến của Nhật Bản, nâng cao hiệu quả thi công và chất lượng.</span><span data-en class="li">Implemented advanced Japanese construction technologies, improving execution and quality.</span></li>
             <li><span data-vi class="li">Quản lý ngân sách, logistics và chuỗi cung ứng; đạt ROI mang tính kỷ lục cho dự án quốc gia trọng điểm.</span><span data-en class="li">Managed budgeting, logistics and supply chain; achieved record-breaking ROI on a nationally significant project.</span></li>
           </ul>
         </div>
@@ -605,7 +651,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
             <li><span data-vi class="li">Chịu trách nhiệm toàn diện về lợi nhuận dự án; áp dụng tư duy kinh doanh chiến lược vào lĩnh vực xây dựng.</span><span data-en class="li">Fully accountable for project profitability; applied a strategic business mindset to construction.</span></li>
             <li><span data-vi class="li">Tối ưu năng lực sản xuất, quản lý chất lượng nghiêm ngặt và kiểm soát chi phí nhân công/nguyên vật liệu.</span><span data-en class="li">Optimised production capacity, enforced quality control and managed labour + raw-material costs.</span></li>
             <li><span data-vi class="li">Đạt mức tăng trưởng doanh số trên 200% nhờ điều phối các bên liên quan và sáng kiến chiến lược.</span><span data-en class="li">Achieved 200%+ sales growth through stakeholder coordination and strategic initiatives.</span></li>
-            <li><span data-vi class="li">Hỗ trợ dự án đạt chứng chỉ LEED Platinum — minh chứng cam kết phát triển bền vững.</span><span data-en class="li">Supported projects in attaining LEED Platinum — demonstrating sustainability commitment.</span></li>
+            <li><span data-vi class="li">Hỗ trợ dự án đạt chứng chỉ LEED Platinum, minh chứng cho cam kết phát triển bền vững.</span><span data-en class="li">Supported projects in attaining LEED Platinum, demonstrating a commitment to sustainability.</span></li>
           </ul>
         </div>
       </article>
@@ -633,10 +679,10 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
           <h3 class="exp-role serif" data-en>Quality Engineer · Site Engineer</h3>
           <div class="exp-org">Bouygues Bâtiment International (Saigon M&amp;C Tower) <span class="sep">/</span> Obayashi Corporation (Thủ Thiêm Tunnel)</div>
           <ul class="exp-bullets">
-            <li><span data-vi class="li">Phụ trách Kỹ sư Chất lượng 3 năm 5 tháng cho dự án toà tháp Saigon M&amp;C — một trong những công trình cao tầng biểu tượng của TP.HCM.</span><span data-en class="li">Quality Engineer for 3 years 5 months on the Saigon M&amp;C Tower — an iconic HCMC skyscraper.</span></li>
-            <li><span data-vi class="li">Kỹ sư hiện trường cho dự án Cao tốc Đông Tây Sài Gòn (Đường hầm Thủ Thiêm) — sử dụng công nghệ hầm dìm tiên tiến.</span><span data-en class="li">Site Engineer for the Saigon East-West Highway (Thủ Thiêm Tunnel) — using advanced immersed-tunnel methodology.</span></li>
+            <li><span data-vi class="li">Phụ trách Kỹ sư Chất lượng 3 năm 5 tháng cho dự án toà tháp Saigon M&amp;C, một trong những công trình cao tầng biểu tượng của TP.HCM.</span><span data-en class="li">Quality Engineer for 3 years 5 months on the Saigon M&amp;C Tower, an iconic Ho Chi Minh City skyscraper.</span></li>
+            <li><span data-vi class="li">Kỹ sư hiện trường cho dự án Cao tốc Đông Tây Sài Gòn (Đường hầm Thủ Thiêm), ứng dụng công nghệ hầm dìm tiên tiến.</span><span data-en class="li">Site Engineer for the Saigon East-West Highway (Thủ Thiêm Tunnel), applying advanced immersed-tunnel methodology.</span></li>
             <li><span data-vi class="li">Hợp tác với các nhà thầu hàng đầu châu Âu và châu Á; quản lý nhà cung cấp quốc tế và giám sát chất lượng vật liệu.</span><span data-en class="li">Collaborated with top European and Asian contractors; managed global suppliers and quality assurance.</span></li>
-            <li><span data-vi class="li">Thành thạo lập trình VBA và AutoLISP để tự động hoá thiết kế cầu đường — kết hợp kỹ thuật với tư duy hệ thống.</span><span data-en class="li">Proficient in VBA and AutoLISP coding for bridge/road design automation — fusing engineering with systems thinking.</span></li>
+            <li><span data-vi class="li">Phát triển công cụ lập trình tự động hoá thiết kế cầu đường (VBA, AutoLISP…), kết hợp kỹ thuật với tư duy hệ thống.</span><span data-en class="li">Built programming-based design-automation tools for bridge/road engineering (VBA, AutoLISP, etc.), fusing engineering with systems thinking.</span></li>
           </ul>
         </div>
       </article>
@@ -670,6 +716,8 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
         <div class="deg serif" data-en>Master of Science · Civil Engineering</div>
         <div class="sch" data-vi>Đại học Giao thông Vận tải · Việt Nam</div>
         <div class="sch" data-en>University of Transport and Communications · Vietnam</div>
+        <div class="ach" data-vi>Luận văn: "Ứng dụng công nghệ bê tông nhẹ trong xây dựng đường ô tô khu vực Đồng bằng Nam Bộ" · Bảo vệ 9,3/10 (loại Giỏi)</div>
+        <div class="ach" data-en>Thesis: "Application of Lightweight Concrete Technology in Highway Construction in the Southern Delta Region of Vietnam" · Defended 9.3/10 (Distinction)</div>
       </div>
       <div class="edu-card">
         <div class="yr">2002 — 2007</div>
@@ -685,20 +733,84 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
     <div style="margin-top:48px">
       <div class="eyebrow"><span data-vi>Chứng chỉ & đào tạo</span><span data-en>Certifications & training</span></div>
       <div class="skills-grid">
-        <div class="skill"><div class="t" data-vi>Đào tạo nâng cao tại Nhật Bản</div><div class="t" data-en>Advanced training in Japan</div><div class="d">P.S. Mitsubishi · 2016–2017</div></div>
+        <div class="skill skill-feat"><div class="t" data-vi>Đào tạo nâng cao tại Nhật Bản</div><div class="t" data-en>Advanced training in Japan</div><div class="d" data-vi>P.S. Mitsubishi · 2016–2017 · Quản lý dự án, Sản xuất, Dự toán, Kaizen 5S</div><div class="d" data-en>P.S. Mitsubishi · 2016–2017 · Project Mgmt, Production, Cost Estimation, Kaizen 5S</div></div>
+        <div class="skill"><div class="t" data-vi>Năng lực thực thi cam kết quốc tế về Thương mại & Đầu tư</div><div class="t" data-en>Capacity Building: Trade &amp; Investment Commitments</div><div class="d" data-vi>WTO Chairs Programme · Đại học Ngoại thương (FTU) · 2023</div><div class="d" data-en>WTO Chairs Programme · Foreign Trade University · 2023</div></div>
         <div class="skill"><div class="t">Internal Auditor ISO 9001:2015</div><div class="d">Bureau Veritas · 2017</div></div>
         <div class="skill"><div class="t" data-vi>Quản lý điểm thay đổi</div><div class="t" data-en>Change Point Management</div><div class="d">IMTC · 2018</div></div>
         <div class="skill"><div class="t" data-vi>Chứng chỉ Nghiệp vụ Sư phạm Đại học</div><div class="t" data-en>University Lecturer Certification</div><div class="d" data-vi>Đại học Sư phạm Huế · 2022 · Loại Giỏi</div><div class="d" data-en>Hue University of Education · 2022 · Distinction</div></div>
         <div class="skill"><div class="t" data-vi>Chứng chỉ Hành nghề Xây dựng (Hạng I)</div><div class="t" data-en>Construction Practice Certificate (Class I)</div><div class="d" data-vi>Bộ Xây dựng · 2025–2030</div><div class="d" data-en>MoC Vietnam · 2025–2030</div></div>
-        <div class="skill"><div class="t" data-vi>Cố vấn Khởi nghiệp Đồng Nam Bộ</div><div class="t" data-en>Startup Mentor — Southern Region</div><div class="d">VCCI · 2023</div></div>
+        <div class="skill"><div class="t" data-vi>Cố vấn Khởi nghiệp Đồng Nam Bộ</div><div class="t" data-en>Startup Mentor, Southern Region</div><div class="d">VCCI · 2023</div></div>
         <div class="skill"><div class="t" data-vi>Digital Marketing Trực tuyến</div><div class="t" data-en>Online Digital Marketing</div><div class="d">VCCI × Meta · 2023</div></div>
-        <div class="skill"><div class="t" data-vi>Diễn giả — Hội nghị ATGT Việt Nam</div><div class="t" data-en>Speaker — Vietnam Traffic Safety Conf.</div><div class="d" data-vi>Uỷ ban ATGT Quốc gia · 2021 & 2023</div><div class="d" data-en>National Traffic Safety Committee · 2021 & 2023</div></div>
+        <div class="skill"><div class="t" data-vi>Diễn giả, Hội nghị ATGT Việt Nam</div><div class="t" data-en>Speaker, Vietnam Traffic Safety Conf.</div><div class="d" data-vi>Uỷ ban ATGT Quốc gia · 2021 & 2023</div><div class="d" data-en>National Traffic Safety Committee · 2021 & 2023</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <div class="eyebrow"><span data-vi>Bài báo & ấn phẩm</span><span data-en>Publications</span></div>
+      <div class="pub-list">
+        <div class="pub">
+          <div class="pub-t serif" data-vi>Trở về nhà an toàn khi tham gia giao thông</div>
+          <div class="pub-t serif" data-en>Returning Home Safely When Participating in Traffic</div>
+          <div class="pub-m" data-vi>Đồng tác giả · Tạp chí Cầu Đường Việt Nam · Số 3, 2021 · tr. 53</div>
+          <div class="pub-m" data-en>Co-author · Vietnam Bridge &amp; Road Journal · No. 3, 2021 · p. 53</div>
+        </div>
+        <div class="pub">
+          <div class="pub-t serif" data-vi>Tham gia giao thông an toàn trong giai đoạn dịch bệnh</div>
+          <div class="pub-t serif" data-en>Safe Traffic Participation During the Pandemic</div>
+          <div class="pub-m" data-vi>Đồng tác giả · Kỷ yếu Hội nghị An toàn Giao thông Việt Nam 2021 · Uỷ ban ATGT Quốc gia</div>
+          <div class="pub-m" data-en>Co-author · Proceedings of the Vietnam Traffic Safety Conference 2021 · National Traffic Safety Committee</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ============ VOLUNTEER & NETWORKING ============ -->
+<section id="volunteer">
+  <div class="wrap">
+    <div class="eyebrow"><span data-vi>Hoạt động cộng đồng & kết nối</span><span data-en>Volunteer &amp; Networking Activities</span></div>
+    <h2 class="section-h serif">
+      <span data-vi>Đồng hành & <em>kết nối</em>.</span>
+      <span data-en>Giving back & <em>connecting</em>.</span>
+    </h2>
+
+    <!--
+      ===== KHU VỰC UPLOAD HÌNH / VIDEO =====
+      Có 6 ô media. Để thay nội dung, chỉ cần đặt file vào thư mục images/ theo đúng tên:
+        gallery-1.jpg ... gallery-6.jpg   (ảnh)
+      ĐỂ DÙNG VIDEO YOUTUBE thay cho 1 ô: xoá thẻ <img ...> trong ô đó và dán thay bằng:
+        <iframe src="https://www.youtube.com/embed/MA_VIDEO" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
+      (MA_VIDEO là phần sau "watch?v=" trong link YouTube)
+      Sửa luôn caption trong thẻ <figcaption> bên dưới mỗi ô.
+    -->
+    <div class="media-grid">
+      <figure class="media-slot">
+        <img src="images/gallery-1.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 1 (thay tại đây)</figcaption><figcaption data-en>Caption 1 (edit here)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-2.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 2 (thay tại đây)</figcaption><figcaption data-en>Caption 2 (edit here)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-3.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 3 (thay tại đây)</figcaption><figcaption data-en>Caption 3 (edit here)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-4.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 4 (thay tại đây)</figcaption><figcaption data-en>Caption 4 (edit here)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-5.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 5 (thay tại đây)</figcaption><figcaption data-en>Caption 5 (edit here)</figcaption>
+      </figure>
+      <figure class="media-slot">
+        <img src="images/gallery-6.jpg" alt="" loading="lazy" />
+        <figcaption data-vi>Chú thích 6 (thay tại đây)</figcaption><figcaption data-en>Caption 6 (edit here)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 <section id="contact" class="contact">
   <div class="wrap">
     <h2 class="serif">
@@ -718,17 +830,17 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
       <div class="c-block">
         <div class="k" data-vi>Điện thoại · WhatsApp · Zalo</div>
         <div class="k" data-en>Phone · WhatsApp · Zalo</div>
-        <div class="v"><a href="tel:+84902637775">+84 902 637 775</a></div>
+        <div class="v"><a href="tel:+84939114991">+84 939 114 991</a></div>
       </div>
       <div class="c-block">
         <div class="k">LinkedIn</div>
-        <div class="v"><a href="http://bit.ly/48U7eh8" target="_blank" rel="noopener">Nguyen Ngoc Trang MBA, MSc</a></div>
+        <div class="v"><a href="https://www.linkedin.com/in/nguyen-ngoc-trang-mba-msc-93205066/" target="_blank" rel="noopener">Nguyen Ngoc Trang MBA, MSc</a></div>
       </div>
       <div class="c-block">
         <div class="k" data-vi>Địa điểm</div>
         <div class="k" data-en>Location</div>
-        <div class="v" data-vi>Thủ Đức · TP. Hồ Chí Minh · Việt Nam</div>
-        <div class="v" data-en>Thủ Đức · Ho Chi Minh City · Vietnam</div>
+        <div class="v" data-vi>Hồ Chí Minh · Việt Nam</div>
+        <div class="v" data-en>Ho Chi Minh · Vietnam</div>
       </div>
     </div>
   </div>
@@ -738,7 +850,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
 <footer>
   <div class="wrap foot">
     <div class="left">© <span id="yr"></span> · <b>Nguyễn Ngọc Trang</b> · <span data-vi>Đã xây tay bằng HTML & sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
-    <div class="right mono">v1.0 · HCMC</div>
+    <div class="right mono">v1.1 · Ho Chi Minh City</div>
   </div>
 </footer>
 
