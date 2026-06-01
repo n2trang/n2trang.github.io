@@ -181,6 +181,21 @@ section{padding:80px 0;position:relative}
 .about{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
 @media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}.about-side{position:static;top:auto}}
 .about-side{position:sticky;top:100px}
+
+/* Mobile fix: keep the ID card in normal flow so it cannot overlap the intro text */
+@media(max-width:900px){
+  .about-side{position:relative!important;top:auto!important;z-index:auto}
+}
+@media(max-width:520px){
+  .wrap{padding:0 22px}
+  section{padding:60px 0}
+  .id-card{padding:18px}
+  .id-row{display:grid;grid-template-columns:1fr;gap:4px}
+  .id-row .v{text-align:left;overflow-wrap:anywhere}
+  .about-prose p{font-size:17px;line-height:1.62}
+  .about-prose p:first-child::first-letter{font-size:56px;padding-right:10px}
+}
+
 .about-prose p{
   font-size:18px;line-height:1.65;margin-bottom:20px;
   color:var(--ink-soft);
@@ -917,12 +932,12 @@ document.querySelectorAll('section, .exp-item, .edu-card, .skill, .hl-card').for
   io.observe(el);
 });
 
-// View counter — seeds at 400 on the very first load, then +1 per visit
+// View counter — seeds at 420 on the very first load, then +1 per visit
 (function(){
   var el = document.getElementById('viewcount');
   if (!el) return;
   var base = 'https://countapi.mileshilliard.com/api/v1/';
-  var key  = 'n2trang_github_io_views_b400';
+  var key  = 'n2trang_github_io_views_b420';
   function show(v){
     var n = parseInt(v, 10);
     el.textContent = (!isNaN(n)) ? n.toLocaleString('en-US') : '—';
@@ -930,8 +945,8 @@ document.querySelectorAll('section, .exp-item, .edu-card, .skill, .hl-card').for
   fetch(base + 'get/' + key)
     .then(function(r){
       if (r.status === 404) {
-        // First time the counter is ever loaded: start it at 400
-        return fetch(base + 'set/' + key + '?value=400')
+        // First time the counter is ever loaded: start it at 420
+        return fetch(base + 'set/' + key + '?value=420')
           .then(function(r2){ return r2.json(); })
           .then(function(d){ show(d.value); });
       }
