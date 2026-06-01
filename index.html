@@ -179,7 +179,7 @@ section{padding:80px 0;position:relative}
 
 /* About */
 .about{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
-@media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:36px}.about-side{position:static;top:auto}}
 .about-side{position:sticky;top:100px}
 .about-prose p{
   font-size:18px;line-height:1.65;margin-bottom:20px;
@@ -358,6 +358,9 @@ html[data-lang="en"] .exp-when .now[data-en]{display:inline-block}
   letter-spacing:.05em;
 }
 .foot .left b{color:var(--ink)}
+.views{color:var(--ink-soft)}
+.views #viewcount{color:var(--gold);font-weight:600}
+.views .eye{opacity:.7;font-size:11px}
 @media(max-width:520px){.foot{flex-direction:column;gap:12px;text-align:center}}
 
 /* Reveal animation */
@@ -881,7 +884,7 @@ html[data-lang="vi"] [data-vi].fx,html[data-lang="en"] [data-en].fx{display:flex
 <footer>
   <div class="wrap foot">
     <div class="left">© <span id="yr"></span> · <b><span data-vi>Nguyễn Ngọc Trang</span><span data-en>Nguyen Ngoc Trang</span></b> · <span data-vi>Đã xây tay bằng HTML &amp; sự tỉ mỉ.</span><span data-en>Hand-built in HTML with care.</span></div>
-    <div class="right mono">v1.6 · Ho Chi Minh City</div>
+    <div class="right mono"><span class="views"><span class="eye">👁</span> <span id="viewcount">…</span> <span data-vi>lượt xem</span><span data-en>views</span></span> · v1.7 · Ho Chi Minh City</div>
   </div>
 </footer>
 
@@ -913,6 +916,32 @@ document.querySelectorAll('section, .exp-item, .edu-card, .skill, .hl-card').for
   el.classList.add('reveal');
   io.observe(el);
 });
+
+// View counter — seeds at 400 on the very first load, then +1 per visit
+(function(){
+  var el = document.getElementById('viewcount');
+  if (!el) return;
+  var base = 'https://countapi.mileshilliard.com/api/v1/';
+  var key  = 'n2trang_github_io_views_b400';
+  function show(v){
+    var n = parseInt(v, 10);
+    el.textContent = (!isNaN(n)) ? n.toLocaleString('en-US') : '—';
+  }
+  fetch(base + 'get/' + key)
+    .then(function(r){
+      if (r.status === 404) {
+        // First time the counter is ever loaded: start it at 400
+        return fetch(base + 'set/' + key + '?value=400')
+          .then(function(r2){ return r2.json(); })
+          .then(function(d){ show(d.value); });
+      }
+      // Key already exists: count this visit (+1)
+      return fetch(base + 'hit/' + key)
+        .then(function(r2){ return r2.json(); })
+        .then(function(d){ show(d.value); });
+    })
+    .catch(function(){ el.textContent = '—'; });
+})();
 </script>
 
 </body>
